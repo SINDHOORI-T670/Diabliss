@@ -36,4 +36,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    protected $with = ['profile'];
+    public function profile()
+    {
+        return $this->belongsTo('App\models\Profile','id','user_id');
+    }
 }
