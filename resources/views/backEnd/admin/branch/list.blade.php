@@ -82,6 +82,9 @@
                             </td>
                             <td>
                                 <a href="{{route('Edit-Branch-Details',['id'=>$item->id])}}">Edit</a>
+                                {{-- <button type="button" class="btn mr-2 mb-2 btn-danger" onclick="location.href='{{ url('admin/delete/branch')}}/{{$item->id}}'">
+                                    Delete
+                                </button> --}}
                             </td>
                         </tr>
                     @endforeach

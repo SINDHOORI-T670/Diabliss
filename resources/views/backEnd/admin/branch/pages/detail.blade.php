@@ -133,11 +133,13 @@
 <script type="text/javascript">
     $("#togBtn").on('change', function() {
         if ($(this).is(':checked')) {
-            $(this).attr('value', 'on');
+            $(this).attr('value', '0');
+            $(this).attr("checked",true);
             // alert($(this).val());
         }
         else {
-           $(this).attr('value', 'off');
+           $(this).attr('value', '1');
+           $(this).removeAttr('checked');
         //    alert($(this).val());
         }
     });

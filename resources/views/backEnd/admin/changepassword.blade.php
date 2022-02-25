@@ -14,7 +14,7 @@
                     <div class="col-md-12">
                         <div class="position-relative form-group">
                             <label for="exampleEmail" class="col-sm-2 col-form-label required">New Password</label>
-                            <input name="password" id="exampleName" placeholder="Enter Password" type="password" class="form-control  @if ($errors->has('confpassword')) is-invalid @endif" >
+                            <input name="password" id="exampleName" placeholder="Enter Password" type="password" class="form-control  @if ($errors->has('password')) is-invalid @endif" >
                             @if ($errors->has('password'))
                                 <em id="firstname-error" class="error invalid-feedback">{{ $errors->first('password') }}</em>
                             @endif

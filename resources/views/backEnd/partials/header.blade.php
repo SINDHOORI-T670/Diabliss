@@ -105,6 +105,22 @@ input:checked + .slider .off
 
 .slider.round:before {
   border-radius: 50%;}
+  .modal-backdrop {display: none;}
+  .myModal
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin:auto;
+  display:table;
+  max-width:50%;
+}
+.myModal .modal-content
+{
+  display:table-cell;
+}
 </style>
 </head>
 
@@ -269,20 +285,43 @@ input:checked + .slider .off
                         <ul class="vertical-nav-menu">
                             
                             <li class="app-sidebar__heading">Menu</li>
-                            <li>
+                            {{-- <li>
                                 <a href="widgets-chart-boxes.html" >
                                     <i class="metismenu-icon pe-7s-graph"></i> Orders
                                 </a>
+                            </li> --}}
+                            <li>
+                                <a href="{{url('admin/products')}}" >
+                                    <i class="metismenu-icon pe-7s-way"></i> Products
+                                </a>
                             </li>
                             <li>
-                                <a href="widgets-chart-boxes-2.html" >
-                                    <i class="metismenu-icon pe-7s-way"></i> Products
+                                <a href="{{ url('admin/delivery-zones') }}">
+                                    <i class="metismenu-icon pe-7s-ball"></i> Delivery Zones
                                 </a>
                             </li>
                             <li>
                                 <a href="{{ url('admin/branches') }}" >
                                     <i class="metismenu-icon pe-7s-ball"></i> Branches
                                 </a>
+                            </li>
+                            <li>
+                                <a href="{{ url('admin/categories') }}" >
+                                    <i class="metismenu-icon pe-7s-ball"></i> Category
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-browser"></i>Settings
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                                <ul class="mm-collapse">
+                                    <li>
+                                        <a href="{{url('admin/list/country')}}">
+                                            <i class="metismenu-icon"></i> Country
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
